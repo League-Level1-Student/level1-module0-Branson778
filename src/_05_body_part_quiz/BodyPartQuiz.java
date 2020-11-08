@@ -42,7 +42,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(50, 500);
 
 		showNextImage();
 
@@ -51,25 +51,56 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+int score = 0;
 		// 2. Set the size of the window in the initializeGui() method 
-
+initializeGui();
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
+		String guess = JOptionPane.showInputDialog("Who is this?");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+if(guess.equalsIgnoreCase("Arnold")) {
+	score += 1;
+	JOptionPane.showMessageDialog(null, "Correct, this is Arnold Schwarzenegger!");
+}
+else {
+	JOptionPane.showMessageDialog(null, "Wrong, this is Arnold Schwarzenegger.");
+}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
+//done
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
 
 		// 8. .... repeat 4-7 for all your images.....
-
+String guess2 = JOptionPane.showInputDialog("Who is this?");
+if(guess2.equalsIgnoreCase("Leonardo")) {
+	score += 1;
+	JOptionPane.showMessageDialog(null, "Correct, this is Leonardo DiCaprio!");
+}
+else {
+	JOptionPane.showMessageDialog(null, "Wrong, this is Leonardo DiCaprio.");
+}
+showNextImage();
+String guess3 = JOptionPane.showInputDialog("Who is this?");
+if(guess3.equalsIgnoreCase("Morgan")) {
+	score += 1;
+	JOptionPane.showMessageDialog(null, "Correct, this is Morgan Freedman!");
+}
+else {
+	JOptionPane.showMessageDialog(null, "Wrong, this is Morgan Freedman.");
+}
+showNextImage();
+String guess4 = JOptionPane.showInputDialog("Who is this?");
+if(guess4.equalsIgnoreCase("Jack")) {
+	score += 1;
+	JOptionPane.showMessageDialog(null, "Correct, this is Jack Black!");
+}
+else {
+	JOptionPane.showMessageDialog(null, "Wrong, this is Jack Black.");
+}
 		// 9. Show them their current score
-
+JOptionPane.showMessageDialog(null, "Your score is "+ score+ " !");
 	}
 
 	public void showNextImage() {
